@@ -3,6 +3,8 @@ import { getCollections, getProductCount } from "@/lib/queries";
 
 import Image from "next/image";
 
+// EnsureUI: test page loads, page should contain block with a "Choose a Category" title
+
 export default async function Home() {
   const [collections, productCount] = await Promise.all([
     getCollections(),
