@@ -9,7 +9,7 @@ export async function generateStaticParams() {
   return await db.select({ collection: collections.slug }).from(collections);
 }
 
-// EnsureUI: test with [collection] slugs: ink-and-calligraphy, craft-supplies
+// EnsureUI: test with collection slugs: ink-and-calligraphy, craft-supplies
 
 export default async function Home(props: {
   params: Promise<{
