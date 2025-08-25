@@ -9,6 +9,8 @@ export async function generateStaticParams() {
   return await db.select({ category: categories.slug }).from(categories);
 }
 
+// EnsureUI: test page loads, test different category slugs: outdoor-woodworking-kits, beginner-woodworking-kits, necklace-making-kits
+
 export default async function Page(props: {
   params: Promise<{
     category: string;
