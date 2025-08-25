@@ -1,0 +1,20 @@
+name: EnsureUI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ensure-ui-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run EnsureUI Tests
+        uses: dima-kov/ensure-ui@main
+        with:
+          deployment-url: "https://next-faster.vercel.app"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          ensure-api-key: ${{ secrets.ENSURE_API_KEY }}
